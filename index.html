@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="120">
+  <title>Polymarket Bot — Live Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0d0d1a; color: #e2e2f0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; }
+    .header { background: #12121a; border-bottom: 1px solid #2a2a3a; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
+    .live-badge { background: #7c3aed; color: white; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 10px; }
+    .updated { color: #6b6b8a; font-size: 12px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; padding: 16px; }
+    .card { background: #1a1a2e; border: 1px solid #2a2a3a; border-radius: 8px; padding: 14px 16px; }
+    .card-label { color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+    .card-value { font-size: 22px; font-weight: 700; }
+    .card-sub { color: #888; font-size: 11px; margin-top: 4px; }
+    .accent { color: #a78bfa; }
+    .green { color: #4ade80; }
+    .red { color: #f87171; }
+    .yellow { color: #fbbf24; }
+    .section { padding: 0 16px 16px; }
+    .section-title { font-size: 13px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 0 8px; border-top: 1px solid #2a2a3a; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th { color: #888; text-align: left; padding: 6px 8px; font-size: 11px; text-transform: uppercase; border-bottom: 1px solid #2a2a3a; }
+    td { padding: 8px 8px; border-bottom: 1px solid #1e1e30; vertical-align: top; }
+    .q { max-width: 260px; word-break: break-word; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .empty { text-align: center; color: #4a4a6a; padding: 20px; }
+    .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+    .yes { background: #166534; color: #4ade80; }
+    .no { background: #7f1d1d; color: #f87171; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <span style="font-size:18px;font-weight:700">🔮 POLYMARKET</span>
+      <span class="live-badge">LIVE</span>
+    </div>
+    <div class="updated">Updated: 21/04/2026, 16:56:00</div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Bankroll</div>
+      <div class="card-value accent">$635.00</div>
+      <div class="card-sub">Started $635.00</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Total P&amp;L</div>
+      <div class="card-value green">+$0.00</div>
+      <div class="card-sub">0 settled</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Open Positions</div>
+      <div class="card-value yellow">12</div>
+      <div class="card-sub">$94.87 deployed</div>
+    </div>
+    <div class="card">
+      <div class="card-label">Win Rate</div>
+      <div class="card-value accent">0.0%</div>
+      <div class="card-sub">0/0 settled</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Open Positions (12)</div>
+    <table>
+      <thead><tr><th>Market</th><th>Side</th><th class="num">Stake</th><th class="num">Our %</th><th class="num">Mkt %</th><th class="num">Edge</th><th>Placed</th></tr></thead>
+      <tbody>
+  <tr>
+    <td class="q">Will Cory Booker win the 2028 Democratic presidential nomina…</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$6.50</td>
+    <td class="num">52.0%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+4.1%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will Raphael Warnock win the 2028 Democratic presidential no…</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$6.60</td>
+    <td class="num">52.1%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+4.2%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will Glenn Youngkin win the 2028 US Presidential Election?</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$6.95</td>
+    <td class="num">52.2%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+4.4%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will Tom Brady win the 2028 Republican presidential nominati…</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$7.03</td>
+    <td class="num">52.2%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+4.4%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will John Thune win the 2028 Republican presidential nominat…</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$7.51</td>
+    <td class="num">52.4%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+4.7%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will Jasmine Crockett win the 2028 Democratic presidential n…</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$9.31</td>
+    <td class="num">52.9%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+5.9%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will the San Antonio Spurs win the 2026 NBA Finals?</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$5.77</td>
+    <td class="num">51.8%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+3.6%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will Roy Cooper win the 2028 Democratic presidential nominat…</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$12.91</td>
+    <td class="num">54.1%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+8.1%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will Atletico Madrid win the 2025–26 Champions League?</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$16.57</td>
+    <td class="num">55.2%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+10.4%</td>
+    <td>21 Apr, 16:29</td>
+  </tr>
+  <tr>
+    <td class="q">Will Greg Abbott win the 2028 US Presidential Election?</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$4.93</td>
+    <td class="num">52.6%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+5.2%</td>
+    <td>20 Apr, 21:35</td>
+  </tr>
+  <tr>
+    <td class="q">Will Phil Murphy win the 2028 Democratic presidential nomina…</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$5.07</td>
+    <td class="num">52.7%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+5.3%</td>
+    <td>20 Apr, 20:35</td>
+  </tr>
+  <tr>
+    <td class="q">Will Vivek Ramaswamy win the 2028 US Presidential Election?</td>
+    <td><span class="badge yes">YES</span></td>
+    <td class="num">$5.72</td>
+    <td class="num">53.0%</td>
+    <td class="num">50.0%</td>
+    <td class="num green">+6.0%</td>
+    <td>20 Apr, 20:25</td>
+  </tr></tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Settled (0)</div>
+    <table>
+      <thead><tr><th>Market</th><th>Side</th><th class="num">Stake</th><th class="num">P&amp;L</th><th>Date</th></tr></thead>
+      <tbody><tr><td colspan="5" class="empty">No settled bets yet</td></tr></tbody>
+    </table>
+  </div>
+</body>
+</html>
